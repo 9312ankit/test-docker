@@ -1,9 +1,3 @@
-FROM python:3.12-slim
+FROM alpine:latest
 
-WORKDIR /app
-
-COPY . .
-
-RUN pip install --no-cache-dir pytest
-
-CMD ["python", "--version"]
+CMD ["echo", "Hello from Docker"]
