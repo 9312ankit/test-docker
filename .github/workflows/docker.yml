@@ -45,8 +45,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container:
-      image: alpine:latest
+    # container:
+    #   image: alpine:latest
 
     steps:
       - run: date
