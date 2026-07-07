@@ -1,3 +1,39 @@
+# name: Docker CI
+
+# on:
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     container:
+#       image: alpine:latest
+
+
+#     steps:
+#       # - name: Checkout Repository
+#       #   uses: actions/checkout@v4
+
+#       - name: Print Date
+#         run: date
+
+#       - name: Build Docker Image
+#         run: docker build -t test-docker .
+
+#       - name: Run Docker Container
+#         run: docker run --rm test-docker
+
+#       - name: Show OS
+#         run: |
+#           hostname
+#           pwd
+#           whoami
+#           cat /etc/os-release
+
+
 name: Docker CI
 
 on:
@@ -12,22 +48,10 @@ jobs:
     container:
       image: alpine:latest
 
-
     steps:
-      # - name: Checkout Repository
-      #   uses: actions/checkout@v4
+      - run: date
 
-      - name: Print Date
-        run: date
-
-      - name: Build Docker Image
-        run: docker build -t test-docker .
-
-      - name: Run Docker Container
-        run: docker run --rm test-docker
-
-      - name: Show OS
-        run: |
+      - run: |
           hostname
           pwd
           whoami
